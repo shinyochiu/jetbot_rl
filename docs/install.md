@@ -32,7 +32,8 @@ rosdep install openai_ros
 cd $THE_PATH_YOU_WANT_TO_INSTALL
 git clone https://github.com/openai/baselines.git
 cd baselines
-pip install tensorflow==1.14 # pip install tensorflow-gpu==1.14
+conda config --set channel_priority false
+conda install -c conda-forge tensorflow=1.14 #pip install tensorflow==1.14 # pip install tensorflow-gpu==1.14
 pip install -e .
 ```
 
